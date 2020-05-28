@@ -1,1 +1,7 @@
+.input-normal {
+    border-color: aqua;
+}
 
+.input-error {
+    border-color: brown;
+}
