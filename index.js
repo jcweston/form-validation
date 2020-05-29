@@ -1,14 +1,7 @@
 const submitButton=document.getElementById("submit-button")
-const user = {
-    'firstName':'',
-    'lastName':'',
-    'dob':'',
-    'userName':'',
-    'gender':'',
-    'email':'',
-    'phoneNumber':''
-}
-let valid=true
+const firstNameInput=document.getElementById('firstName')
+const form=document.getElementById('form')
+let gender =''
 
 function testName(nameType) {
     let nameRegex=/[\D]/
@@ -17,10 +10,23 @@ function testName(nameType) {
     let regexTest = nameRegex.test(name.value)
     if (!regexTest) {
         name.className="input-error"
-        valid=false
+        return false
     } else {
-        user[testType]=name.value
         name.className="input-normal"
+        return true
+    }
+}
+
+function testUserName() {
+    let userNameRegex=/[\D]/
+    let userName=document.getElementById("userName")
+    let regexTest=userNameRegex.test(userName.value)
+    if (!regexTest) {
+        userName.className="input-error"
+        return false
+    } else {
+        userName.className="input-normal"
+        return true
     }
 }
 
@@ -32,17 +38,23 @@ function testDate() {
         date.className="input-error"
         valid=false
     } else {
-        user['dob']=date.value
         date.className="input-normal"
     }
 }
 
-submitButton.addEventListener("click",()=>{
-    valid=true
-    testName('first')
-    testName('last')
-    testDate()
-    if(valid) {
-       console.log(user) 
+function formSubmit(event) {
+    event.preventDefault();
+    let user = {
+        'firstName' : document.getElementById("firstName"),
+        'lastName' : document.getElementById("lastName"),
+        'dob' : document.getElementById("dob"),
+        'gender' : gender,
+        'firstName' : document.getElementById("firstName"),
+        'firstName' : document.getElementById("firstName"),
     }
-})
+    console.log(user)
+    // fetch('https://intense-coast-72655.herokuapp.com/',{method:'POST',body:JSON.stringify(user)}).then(response=>response.json())
+}
+
+
+form.addEventListener('submit',formSubmit)

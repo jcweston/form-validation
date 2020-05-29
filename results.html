@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results</title>
+</head>
+<body>
+    <div id="results"></div>
+    <a href="/">Back</a>
+    <script>
+        const resultsList = document.getElementById('results')
+        new URLSEARCHPARAMS(window.location.search).forEach((value,name) => {
+            resultsList.append(`${name}:${value}`)
+            resultsList.append(document.createElement('br'))
+        })
+    </script>
+</body>
+</html>

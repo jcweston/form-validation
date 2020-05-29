@@ -9,43 +9,46 @@
     </head>
     <body>
         <h1>Form Validation</h1>
-        <label for="firstName" class="input-label">First Name</label>
-        <input id="firstName" class="input-normal">
-        <br><br>
-        <label for="lastName" class="input-label">Last Name</label>
-        <input id="lastName" class="input-normal">
-        <br><br>
-        <label for="dob" class="input-label">Date of Birth</label>
-        <input id="dob" class="input-normal" type="date">
-        <br><br>
-        <label for="userName" class="input-label">User Name</label>
-        <input id="userName" class="input-normal">
-        <br><br>
-        <label for="male">Male</label>
-        <input id="male" name="gender"  value="male" class="input-normal" type="radio">
-        <br>
-        <label for="female">Female</label>
-        <input id="female" name="gender" value="female" class="input-normal" type="radio">
-        <br>
-        <label for="non-binary">Non-binary</label>
-        <input id="non-binary" name="gender" value="non-binary" class="input-normal" type="radio">
-        <br>
-        <label for="prefer not to say">Prefer not to say</label>
-        <input id="prefer not to say" name="gender"  value="prefer not to say" class="input-normal" type="radio">
-        <br>
-        <label for="prefer to self-identify">Prefer to self-identify</label>
-        <input id="prefer to self-identify" name="gender"  value="prefer to self-identify" class="input-normal" type="radio">
-        <br>
-        
-        <br><br>
-        <label for="email" class="input-label">Email Address</label>
-        <input id="email" class="input-normal">
-        <br><br>
-        <label for="phoneNumber" class="input-label">Phone Number</label>
-        <input id="phoneNumber" class="input-normal">
-        <br><br>
-
-        <button id="submit-button">Submit</button>
+            <form id="form">
+                <label for="firstName" class="input-label">First Name</label>
+                <input id="firstName" class="input-normal">
+                <br><br>
+                <label for="lastName" class="input-label">Last Name</label>
+                <input id="lastName" class="input-normal">
+                <br><br>
+                <label for="dob" class="input-label">Date of Birth</label>
+                <input id="dob" class="input-normal" type="date">
+                <br><br>
+                <label for="userName" class="input-label">User Name</label>
+                <input id="userName" class="input-normal">
+                <div>
+                    <h4>Gender</h4>
+                    <input id="male" name="gender"  value="male" class="input-normal" type="radio">
+                    <label for="male">Male</label>
+                    <br>
+                    <input id="female" name="gender" value="female" class="input-normal" type="radio">
+                    <label for="female">Female</label>
+                    <br>
+                    <input id="non-binary" name="gender" value="non-binary" class="input-normal" type="radio">
+                    <label for="non-binary">Non-binary</label>
+                    <br>
+                    <input id="prefer not to say" name="gender"  value="prefer not to say" class="input-normal" type="radio">
+                    <label for="prefer not to say">Prefer not to say</label>
+                    <br>
+                    <input id="prefer to self-identify" name="gender"  value="prefer to self-identify" class="input-normal" type="radio">
+                    <label for="prefer to self-identify">Prefer to self-identify</label>
+                </div>
+                <br>
+                <br><br>
+                <label for="email" class="input-label">Email Address</label>
+                <input id="email" class="input-normal">
+                <br><br>
+                <label for="phoneNumber" class="input-label">Phone Number</label>
+                <input id="phoneNumber" class="input-normal">
+                <br><br>
+                <input type="submit" id="submit-button">
+            </form>
+        </div>
 
 
 
